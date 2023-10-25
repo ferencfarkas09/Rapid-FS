@@ -4,9 +4,9 @@ Write a class (called “FS”) in TypeScript, that takes a directory as an argu
 
 We need two methods in this class:
 
-**<code>store(filename, content):</code></strong> Stores the content in filename within the given directory
+<code>store(filename, content):</code></strong> Stores the content in filename within the given directory
 
-**<code>get(filename)</code></strong>: Returns the content from the filename
+<code>get(filename)</code></strong>: Returns the content from the filename
 
 However, people are writing the same data over & over, but using different file names. Our product managers have come up with a method for saving a lot of space. So instead of storing the content as a file using the given filename, store the content using the hash of that content.
 
