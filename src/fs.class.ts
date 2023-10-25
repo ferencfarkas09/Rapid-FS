@@ -8,7 +8,7 @@ import * as path from 'path';
  * @class FS
  * @param directory - Set the directory to read, e.g. /topdir
  */
-export default class FS {
+export class FS {
     private readonly directory: string;
     private fileMap: Map<string, string>;
 
@@ -28,10 +28,10 @@ export default class FS {
     store(filename: string, content: string): void {
 
         const hash = crypto.createHash('md5').update(content).digest('hex'); // Hashing file content
-        const filePath = path.join(this.directory, hash); // File path where store
+        const filePath = path.join(this.directory, filename); // File path where store
 
         if (!fs.existsSync(filePath)) {
-            fs.writeFileSync(filePath, content);
+            fs.writeFileSync(filePath, hash);
         }
 
         this.fileMap.set(filename, hash);
