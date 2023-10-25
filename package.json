@@ -1,0 +1,15 @@
+{
+  "name": "rapid-fs-class",
+  "description": "Instead of storing the content as a file using the given filename, store the content using the hash of that content.",
+  "author": {
+    "email": "wolferi93@gmail.com",
+    "name": "Ferenc Farkas"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "@types/node": "^20.8.9",
+    "crypto": "^1.0.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
