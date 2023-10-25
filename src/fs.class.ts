@@ -28,10 +28,10 @@ export class FS {
     store(filename: string, content: string): void {
 
         const hash = crypto.createHash('md5').update(content).digest('hex'); // Hashing file content
-        const filePath = path.join(this.directory, filename); // File path where store
+        const filePath = path.join(this.directory, hash); // File path where store
 
         if (!fs.existsSync(filePath)) {
-            fs.writeFileSync(filePath, hash);
+            fs.writeFileSync(filePath, content);
         }
 
         this.fileMap.set(filename, hash);
