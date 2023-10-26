@@ -22,8 +22,8 @@ export class FS {
 
     /**
      * Store content hash as file
-     * @param filename - File name to store in given directory
-     * @param content - Content to store as MD5
+     * @param filename - File name
+     * @param content - Content to store as MD5 file name
      */
     store(filename: string, content: string): void {
 
@@ -44,7 +44,7 @@ export class FS {
      */
     get(filename: string): string | null {
         try {
-            const hash = this.fileMap.get(filename); // Read stored file hash
+            const hash = this.fileMap.get(filename); // Read stored file
 
             if (hash) { // If file exists
                 const filePath = path.join(this.directory, hash);
