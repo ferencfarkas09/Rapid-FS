@@ -6,6 +6,13 @@
     "name": "Ferenc Farkas"
   },
   "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "compile" : "tsc src/index.ts",
+    "run-js" : "node src/index.js",
+    "run-ts" : "node --require ts-node/register src/index.ts",
+    "deploy-gcp" : "gcloud app deploy gcp.yaml"
+  },
   "dependencies": {
     "@types/node": "^20.8.9",
     "crypto": "^1.0.1",
